@@ -1,0 +1,94 @@
+:root {
+  --bg: #f6fafc;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --accent: #0ea5e9;
+  --ground: #94a3b8;
+  --tanuja: #ec4899;
+  --rickshaw: #22c55e;
+  --barrier: #f97316;
+  --dog: #8b5cf6;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  background: linear-gradient(180deg, #ffffff, var(--bg));
+  color: var(--ink);
+}
+
+.game-root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px;
+  display: grid;
+  gap: 8px;
+}
+
+.hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.score { font-weight: 600; }
+.progress { display: flex; align-items: center; gap: 10px; min-width: 220px; }
+.progress-label { color: var(--muted); font-size: 12px; }
+.progress-bar { position: relative; flex: 1; height: 10px; background: #e2e8f0; border-radius: 999px; overflow: hidden; }
+.progress-fill { position: absolute; inset: 0 auto 0 0; height: 100%; background: linear-gradient(90deg, #22c55e, #0ea5e9); width: 0%; }
+
+/* removed sound toggle */
+
+canvas#gameCanvas {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #eaf2f8;
+  box-shadow: 0 1px 2px rgba(2, 8, 23, 0.06), 0 8px 24px rgba(2, 8, 23, 0.06);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-card {
+  width: min(92vw, 520px);
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(2, 8, 23, 0.08);
+}
+
+.title { margin: 0 0 6px; font-size: 28px; }
+.subtitle { margin: 0 0 14px; color: var(--muted); }
+.help { margin: 0 0 18px; padding-left: 18px; text-align: left; color: var(--muted); }
+
+.primary-btn {
+  appearance: none;
+  border: none;
+  background: var(--accent);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(14, 165, 233, 0.4);
+}
+
+/* Mobile friendly adjustments */
+@media (max-width: 640px) {
+  .title { font-size: 22px; }
+  .subtitle { font-size: 14px; }
+}
+
+

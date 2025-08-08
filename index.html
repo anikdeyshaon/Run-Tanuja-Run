@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Run Tanuja Run!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="game-root">
+      <div class="hud">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="progress">
+          <div class="progress-label">Progress</div>
+          <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="800" height="400" aria-label="Tanuja runner game canvas"></canvas>
+
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <h1 class="title">Run Tanuja Run!</h1>
+          <p class="subtitle">Help Tanuja to reach Bangladesh Bank!</p>
+          <ul class="help">
+            <li>Space / ↑ to jump</li>
+            <li>Tap anywhere on mobile</li>
+          </ul>
+          <button id="startBtn" class="primary-btn">Start</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
