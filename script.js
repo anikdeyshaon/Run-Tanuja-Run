@@ -30,8 +30,8 @@
   const OBSTACLE_MIN_GAP = 450; // min distance between spawns
   const OBSTACLE_MAX_GAP = 900; // max distance
   const BASE_SPEED = 6; // world speed in px/frame
-  const GOAL_SCORE = 1500; // finish line
-  const GOAL_PREVIEW_SCORE = 1100; // start showing bank building earlier
+  const GOAL_SCORE = 500; // finish line
+  const GOAL_PREVIEW_SCORE = 400; // start showing bank building earlier
 
   // Audio removed
 
@@ -84,7 +84,7 @@
   function gameOver() {
     isGameOver = true;
     isRunning = false;
-    overlayEl.querySelector(".title").textContent = "Tanuja missed Bangladesh Bank today :(";
+    overlayEl.querySelector(".title").textContent = "Tanuja missed Bangladesh Bank today 😭";
     overlayEl.querySelector(".subtitle").textContent = "Tap Play again to help her tomorrow";
     const btn = overlayEl.querySelector("#startBtn");
     if (btn) btn.textContent = "Play again";
@@ -98,8 +98,8 @@
     // celebratory effect, then show overlay with message and Play again button
     triggerConfetti(1500);
     setTimeout(() => {
-      overlayEl.querySelector(".title").textContent = "Congratulations!";
-      overlayEl.querySelector(".subtitle").textContent = "Tanuja successfully reached Bangladesh Bank";
+      overlayEl.querySelector(".title").textContent = "Congratulations! 🎉🥳";
+      overlayEl.querySelector(".subtitle").textContent = "Tanuja successfully reached Bangladesh Bank 🤩";
       const btn = overlayEl.querySelector("#startBtn");
       if (btn) btn.textContent = "Play again";
       overlayEl.style.display = "flex";
