@@ -30,8 +30,8 @@
   const OBSTACLE_MIN_GAP = 450; // min distance between spawns
   const OBSTACLE_MAX_GAP = 900; // max distance
   const BASE_SPEED = 6; // world speed in px/frame
-  const GOAL_SCORE = 500; // finish line
-  const GOAL_PREVIEW_SCORE = 400;
+  const GOAL_SCORE = 1000; // finish line
+  const GOAL_PREVIEW_SCORE = 800;
 if (GOAL_PREVIEW_SCORE >= GOAL_SCORE) {
     GOAL_PREVIEW_SCORE = Math.max(0, GOAL_SCORE - 100);
 } // start showing bank building earlier
@@ -82,6 +82,10 @@ let scoreFloat = 0; // float accumulator for smooth scoring
     speedMultiplier = 1;
     worldX = 0;
     lastSpawnX = 0;
+    scoreFloat = 0;
+    confettiParticles = [];
+    confettiEndAt = 0;
+    if (startBtn) startBtn.textContent = "Start";
     overlayEl.style.display = "none";
   }
 
